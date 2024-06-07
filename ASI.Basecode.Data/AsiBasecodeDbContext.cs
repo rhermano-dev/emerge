@@ -33,49 +33,50 @@ namespace ASI.Basecode.Data
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<RefreshToken> RefreshToken { get; set; }
         public virtual DbSet<CarModel> CarModel { get; set; }
+        public virtual DbSet<PersonModel> Person { get; set; }
 
-       /* protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            base.OnModelCreating(modelBuilder);
-            *//*modelBuilder.Entity<User>(entity =>
-            {
-                entity.HasIndex(e => e.UserId, "UQ__Users__1788CC4D5F4A160F")
-                    .IsUnique();
+        /* protected override void OnModelCreating(ModelBuilder modelBuilder)
+         {
+             base.OnModelCreating(modelBuilder);
+             *//*modelBuilder.Entity<User>(entity =>
+             {
+                 entity.HasIndex(e => e.UserId, "UQ__Users__1788CC4D5F4A160F")
+                     .IsUnique();
 
-                entity.Property(e => e.CreatedBy)
-                    .IsRequired()
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
+                 entity.Property(e => e.CreatedBy)
+                     .IsRequired()
+                     .HasMaxLength(50)
+                     .IsUnicode(false);
 
-                entity.Property(e => e.CreatedTime).HasColumnType("datetime");
+                 entity.Property(e => e.CreatedTime).HasColumnType("datetime");
 
-                entity.Property(e => e.Name)
-                    .IsRequired()
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
+                 entity.Property(e => e.Name)
+                     .IsRequired()
+                     .HasMaxLength(50)
+                     .IsUnicode(false);
 
-                entity.Property(e => e.Password)
-                    .IsRequired()
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
+                 entity.Property(e => e.Password)
+                     .IsRequired()
+                     .HasMaxLength(50)
+                     .IsUnicode(false);
 
-                entity.Property(e => e.UpdatedBy)
-                    .IsRequired()
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
+                 entity.Property(e => e.UpdatedBy)
+                     .IsRequired()
+                     .HasMaxLength(50)
+                     .IsUnicode(false);
 
-                entity.Property(e => e.UpdatedTime).HasColumnType("datetime");
+                 entity.Property(e => e.UpdatedTime).HasColumnType("datetime");
 
-                entity.Property(e => e.UserId)
-                    .IsRequired()
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
-            });
+                 entity.Property(e => e.UserId)
+                     .IsRequired()
+                     .HasMaxLength(50)
+                     .IsUnicode(false);
+             });
 
-            OnModelCreatingPartial(modelBuilder);*//*
-        }*/
+             OnModelCreatingPartial(modelBuilder);*//*
+         }*/
 
-        
+
 
         //partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
     }
